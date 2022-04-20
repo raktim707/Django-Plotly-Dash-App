@@ -43,12 +43,3 @@ Run this code on local host using 127.0.0.1:8000
 * [Dash Docs](https://dash.plot.ly/) - Framework in Python for Plotly
 * [Bootstrap Theme](https://startbootstrap.com/themes/sb-admin-2/) - Fast UI
 * [Django-Dash-Plotly Docs](https://django-plotly-dash.readthedocs.io/en/latest/index.html) - All Documents
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* Thank you Creators of Django Dash Plotly for an integration library for python data visualization using Django and Plotly.

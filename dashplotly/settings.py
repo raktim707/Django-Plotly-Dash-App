@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'dashplotly.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,6 +119,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = reverse_lazy('home')
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ASGI_APPLICATION = 'dashplotly.routing.application'
@@ -126,7 +129,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1',6379),],
+            'hosts': [('127.0.0.1', 6379), ],
         }
     }
 }
@@ -151,7 +154,7 @@ PLOTLY_COMPONENTS = [
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[(os.path.join(BASE_DIR,'static'))]
+STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
 
 #DashPlotlyDjango
 
